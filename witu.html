@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Outbox Device Financing Form</title>
+  <link rel="icon" type="image/png" href="assets/favicon-32x32.png" sizes="32x32">
+  <style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f4f6f8;
+    margin: 0;
+    padding: 0;
+    color: #333;
+  }
+
+  .container {
+    max-width: 750px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  }
+
+  #partner-logo img {
+    display: block;
+    margin: 0 auto 20px;
+    max-width: 160px;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #2c3e50;
+  }
+
+  /* ✅ Updated paragraph style */
+  p.intro {
+    text-align: justify;
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+    color: #555;
+  }
+
+  h2.section-title {
+    font-size: 20px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: #34495e;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  label {
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+/* Apply consistent styling to all inputs */
+input.styled-input,
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="file"],
+select {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border 0.2s;
+}
+
+input.styled-input:focus,
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="file"]:focus,
+select:focus {
+  border-color: #2c3e50;
+  outline: none;
+  box-shadow: 0 0 5px rgba(44, 62, 80, 0.2);
+}
+
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .row .col {
+    flex: 1;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 5px;
+  }
+
+  .checkbox-group label {
+    font-weight: normal;
+  }
+
+  #businessFields,
+  #ninField,
+  #otherIdField {
+    margin-top: 10px;
+  }
+
+  button {
+    margin-top: 25px;
+    padding: 14px 0;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    border: none;
+    background-color: #2c3e50;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+
+  button:hover {
+    background-color: #34495e;
+  }
+
+  .note {
+    font-size: 0.9em;
+    color: #7f8c8d;
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  @media (max-width: 600px) {
+    .row {
+      flex-direction: column;
+    }
+  }
+</style>
+
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Outbox Device Financing Form</title>
+  <style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f4f6f8;
+    margin: 0;
+    padding: 0;
+    color: #333;
+  }
+
+  .container {
+    max-width: 750px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  }
+
+  #partner-logo img {
+    display: block;
+    margin: 0 auto 20px;
+    max-width: 160px;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #2c3e50;
+  }
+
+  /* ✅ Updated paragraph style */
+  p.intro {
+    text-align: justify;
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+    color: #555;
+  }
+
+  h2.section-title {
+    font-size: 20px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: #34495e;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  label {
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+/* Apply consistent styling to all inputs */
+input.styled-input,
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="file"],
+select {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border 0.2s;
+}
+
+input.styled-input:focus,
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="file"]:focus,
+select:focus {
+  border-color: #2c3e50;
+  outline: none;
+  box-shadow: 0 0 5px rgba(44, 62, 80, 0.2);
+}
+
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .row .col {
+    flex: 1;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 5px;
+  }
+
+  .checkbox-group label {
+    font-weight: normal;
+  }
+
+  #businessFields,
+  #ninField,
+  #otherIdField {
+    margin-top: 10px;
+  }
+
+  button {
+    margin-top: 25px;
+    padding: 14px 0;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    border: none;
+    background-color: #2c3e50;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+
+  button:hover {
+    background-color: #34495e;
+  }
+
+  .note {
+    font-size: 0.9em;
+    color: #7f8c8d;
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  @media (max-width: 600px) {
+    .row {
+      flex-direction: column;
+    }
+  }
+</style>
+
+</head>
+<body>
+  <div class="container">
+    <!-- Partner Logo -->
+    <div id="partner-logo">
+      <img id="partnerLogo" src="assets/witu-logo.png" alt="WITU Logo">
+    </div>
+
+    <h1>WITU Device Financing Form</h1>
+    <p class="intro">
+      Thank you for completing this form. We are collecting information to help assess your eligibility 
+      for device financing. Your responses will be kept confidential.
+    </p>
+
+    <form id="deviceForm">
+      <!-- Participant Info -->
+      <h2 class="section-title">Participant Details</h2>
+      <div class="row">
+        <div class="col">
+          <label for="firstName">First Name *</label>
+          <input type="text" id="firstName" name="firstName" required>
+        </div>
+        <div class="col">
+          <label for="lastName">Last Name *</label>
+          <input type="text" id="lastName" name="lastName" required>
+        </div>
+      </div>
+
+      <label for="mtn">MTN Telephone</label>
+      <input type="tel" id="mtn" name="mtn">
+
+      <label for="airtel">Airtel Telephone</label>
+      <input type="tel" id="airtel" name="airtel">
+
+      <label for="village">Village *</label>
+      <input type="text" id="village" name="village" required>
+
+      <label for="district">District *</label>
+      <select id="district" name="district" required>
+        <option value="">Select District</option>
+        <option value="Agago">Agago</option>
+        <option value="Amolatar">Amolatar</option>
+        <option value="Amuria">Amuria</option>
+        <option value="Amuru">Amuru</option>
+        <option value="Apac">Apac</option>
+        <option value="Arua">Arua</option>
+        <option value="Yumbe">Yumbe</option>
+        <option value="Other">Other</option>
+      </select>
+
+      <!-- Identification -->
+      <label for="idType">Identification Type *</label>
+      <select id="idType" name="idType" required>
+        <option value="">Select ID type</option>
+        <option value="National ID">National ID</option>
+        <option value="Passport">Passport</option>
+        <option value="LC Card">LC Card</option>
+        <option value="Driving License">Driving License</option>
+        <option value="Other">Other</option>
+      </select>
+
+      <div id="ninField" style="display:none;">
+        <label for="nin">Identification Number *</label>
+        <input type="text" id="nin" name="nin">
+      </div>
+
+      <div id="otherIdField" style="display:none;">
+        <label for="otherIdNumber">Identification Number *</label>
+        <input type="text" id="otherIdNumber" name="otherIdNumber">
+      </div>
+
+      <label for="idFront">Upload ID (Front) *</label>
+      <input type="file" id="idFront" name="idFront" accept=".png,.jpg,.jpeg" required>
+
+      <label for="idBack">Upload ID (Back) *</label>
+      <input type="file" id="idBack" name="idBack" accept=".png,.jpg,.jpeg" required>
+
+      <!-- Device Info -->
+      <h2 class="section-title">Device Information</h2>
+      <p>Device type: <strong>Laptop</strong></p>
+
+      <label for="priceRange">Provide the total price you are comfortable with for the laptop *</label>
+      <input type="number" id="priceRange" name="priceRange" placeholder="Enter total price (UGX)" required>
+
+      <label for="paymentDuration">Preferred Payment installment periods *</label>
+      <select id="paymentDuration" name="paymentDuration" required>
+        <option value="">Select duration</option>
+        <option value="Weekly">Weekly (52 installments)</option>
+        <option value="Bi-Weekly">Bi-Weekly (26 installments)</option>
+        <option value="Monthly">Monthly (12 installments)</option>
+        <option value="3-Months">Every 3 Months (Quarterly, 4 installments)</option>
+        <option value="6-Months">Every 6 Months (Semi-Annual, 2 installments)</option>
+        <option value="Yearly">Yearly (1 installment)</option>
+      </select>
+
+      <label for="installmentAmount">Preferred Installment Amount</label>
+      <input type="text" id="installmentAmount" name="installmentAmount" placeholder="Calculated automatically" readonly>
+
+      <label for="repaymentPlan">Repayment Plan</label>
+      <input type="text" id="repaymentPlan" name="repaymentPlan">
+
+      <button type="submit">Submit</button>
+      <p class="note">Fields marked with * are mandatory.</p>
+    </form>
+  </div>
+</body>
+
+<script>
+  // ID type toggle
+  const idType = document.getElementById('idType');
+  const ninField = document.getElementById('ninField');
+  const otherIdField = document.getElementById('otherIdField');
+
+  idType.addEventListener('change', () => {
+    if (idType.value === 'National ID') {
+      ninField.style.display = 'block';
+      ninField.querySelector('input').required = true;
+      otherIdField.style.display = 'none';
+      otherIdField.querySelector('input').required = false;
+    } else if (idType.value === 'Passport' || idType.value === 'LC Card' || idType.value === 'Driving License' || idType.value === 'Other') {
+      otherIdField.style.display = 'block';
+      otherIdField.querySelector('input').required = true;
+      ninField.style.display = 'none';
+      ninField.querySelector('input').required = false;
+    } else {
+      ninField.style.display = 'none';
+      otherIdField.style.display = 'none';
+      ninField.querySelector('input').required = false;
+      otherIdField.querySelector('input').required = false;
+    }
+  });
+
+  // File validation
+  function validateFile(fileInput) {
+    const allowed = ['image/png','image/jpeg','image/jpg'];
+    const file = fileInput.files[0];
+    if(file && !allowed.includes(file.type)) {
+      alert("Please upload only PNG, JPG, or JPEG files.");
+      fileInput.value = '';
+    }
+  }
+
+  document.getElementById('idFront').addEventListener('change', function(){validateFile(this);});
+  document.getElementById('idBack').addEventListener('change', function(){validateFile(this);});
+
+  // Auto-calculate installment
+  const priceRange = document.getElementById('priceRange');
+  const paymentDuration = document.getElementById('paymentDuration');
+  const installmentAmount = document.getElementById('installmentAmount');
+
+  function calculateInstallment() {
+    const price = parseFloat(priceRange.value);
+    const duration = paymentDuration.value;
+    if (!price || !duration) {
+      installmentAmount.value = '';
+      return;
+    }
+
+    let periods = 1;
+    switch(duration){
+      case 'Weekly': periods = 52; break;
+      case 'Bi-Weekly': periods = 26; break;
+      case 'Monthly': periods = 12; break;
+      case '3-Months': periods = 4; break;
+      case '6-Months': periods = 2; break;
+      case 'Yearly': periods = 1; break;
+    }
+
+    const installment = price / periods;
+    installmentAmount.value = installment.toLocaleString('en-UG', {
+      style:'currency', currency:'UGX', minimumFractionDigits:0
+    });
+  }
+
+  priceRange.addEventListener('input', calculateInstallment);
+  paymentDuration.addEventListener('change', calculateInstallment);
+
+  // Form submission
+  const form = document.getElementById('deviceForm');
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    // Validate that an ID is entered
+    const idValid = (idType.value === 'National ID' && document.getElementById('nin').value.trim() !== '') ||
+                    ((idType.value === 'Passport' || idType.value === 'LC Card' || idType.value === 'Driving License' || idType.value === 'Other') &&
+                     document.getElementById('otherIdNumber').value.trim() !== '');
+    if(!idValid){
+      alert("Please enter your identification number.");
+      return;
+    }
+
+    alert("Form submitted successfully! (Prototype)");
+    form.reset();
+    ninField.style.display = 'none';
+    otherIdField.style.display = 'none';
+    installmentAmount.value = '';
+  });
+</script>
+
+
+
+</body>
+</html>
