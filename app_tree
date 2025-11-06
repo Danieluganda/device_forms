@@ -1,0 +1,10 @@
+outbox-device-form-prototype/
+│
+├── index.html          # Main form HTML
+├── css/
+│   └── style.css       # CSS for form styling
+├── js/
+│   └── main.js         # JS for validation, dynamic fields
+├── assets/
+│   └── outbox-logo.png # Logo image
+└── README.md           # Optional, instructions for reviewers
