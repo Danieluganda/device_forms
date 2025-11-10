@@ -360,6 +360,11 @@ select:focus {
         <label><input type="radio" name="disabled" value="No"> No</label>
       </div>
 
+        <div id="disabilityDetailsField" style="display:none; margin-top:10px;">
+          <label for="disabilityDetails">If yes, please specify your disability *</label>
+          <textarea id="disabilityDetails" name="disabilityDetails" rows="2" style="width:100%; border-radius:6px; border:1px solid #ccc; padding:10px;"></textarea>
+        </div>
+
       <label for="village">Village *</label>
       <input type="text" id="village" name="village" required>
 
@@ -484,6 +489,23 @@ select:focus {
     }
   }
 
+    // Disability details toggle
+    const disabilityRadios = document.querySelectorAll('input[name="disabled"]');
+    const disabilityDetailsField = document.getElementById('disabilityDetailsField');
+    const disabilityDetails = document.getElementById('disabilityDetails');
+    disabilityRadios.forEach(radio => {
+      radio.addEventListener('change', () => {
+        if (radio.value === 'Yes' && radio.checked) {
+          disabilityDetailsField.style.display = 'block';
+          disabilityDetails.required = true;
+        } else if (radio.value === 'No' && radio.checked) {
+          disabilityDetailsField.style.display = 'none';
+          disabilityDetails.required = false;
+          disabilityDetails.value = '';
+        }
+      });
+    });
+
   document.getElementById('idFront').addEventListener('change', function(){validateFile(this);});
   document.getElementById('idBack').addEventListener('change', function(){validateFile(this);});
 
@@ -533,11 +555,22 @@ select:focus {
       return;
     }
 
+      // Validate disability details if Yes
+      const disabledYes = document.querySelector('input[name="disabled"]:checked');
+      if (disabledYes && disabledYes.value === 'Yes') {
+        if (!disabilityDetails.value.trim()) {
+          alert("Please specify your disability.");
+          disabilityDetails.focus();
+          return;
+        }
+      }
+
     alert("Form submitted successfully! (Prototype)");
     form.reset();
     ninField.style.display = 'none';
     otherIdField.style.display = 'none';
     installmentAmount.value = '';
+      disabilityDetailsField.style.display = 'none';
   });
 </script>
 

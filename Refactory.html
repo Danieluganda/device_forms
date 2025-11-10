@@ -360,6 +360,11 @@ select:focus {
         <label><input type="radio" name="disabled" value="No"> No</label>
       </div>
 
+        <div id="disabilityDetailsField" style="display:none; margin-top:10px;">
+          <label for="disabilityDetails">If yes, please specify your disability *</label>
+          <textarea id="disabilityDetails" name="disabilityDetails" rows="2" style="width:100%; border-radius:6px; border:1px solid #ccc; padding:10px;"></textarea>
+        </div>
+
       <!-- Business Details -->
       <label>
         <input type="checkbox" id="hasBusiness" checked> I have a registered business
@@ -494,6 +499,23 @@ select:focus {
     });
   });
 
+    // Disability details toggle
+    const disabilityRadios = document.querySelectorAll('input[name="disabled"]');
+    const disabilityDetailsField = document.getElementById('disabilityDetailsField');
+    const disabilityDetails = document.getElementById('disabilityDetails');
+    disabilityRadios.forEach(radio => {
+      radio.addEventListener('change', () => {
+        if (radio.value === 'Yes' && radio.checked) {
+          disabilityDetailsField.style.display = 'block';
+          disabilityDetails.required = true;
+        } else if (radio.value === 'No' && radio.checked) {
+          disabilityDetailsField.style.display = 'none';
+          disabilityDetails.required = false;
+          disabilityDetails.value = '';
+        }
+      });
+    });
+
   // ID type toggle
   const idType = document.getElementById('idType');
   const ninField = document.getElementById('ninField');
@@ -578,10 +600,21 @@ select:focus {
       }
     }
 
+      // Validate disability details if Yes
+      const disabledYes = document.querySelector('input[name="disabled"]:checked');
+      if (disabledYes && disabledYes.value === 'Yes') {
+        if (!disabilityDetails.value.trim()) {
+          alert("Please specify your disability.");
+          disabilityDetails.focus();
+          return;
+        }
+      }
+
     alert("Form submitted successfully! (Prototype)");
     form.reset();
     toggleBusinessFields(); // reset toggle state
     installmentAmount.value = '';
+      disabilityDetailsField.style.display = 'none';
   });
 </script>
 
